@@ -46,7 +46,7 @@
         if (!urlGuestName) {
             guestNameElement.innerHTML = `Kepada Yth. Tamu Undangan`;
             validationMessage.style.display = 'block'; 
-            validationMessage.innerHTML = 'Silakan masukkan nama Anda di URL (Contoh: ?name=budi santoso).';
+            validationMessage.innerHTML = 'Silakan masukkan nama Anda di URL (Contoh: ?name=Farhan Kurnia).';
             openButton.style.opacity = 0.5;
             return;
         }
@@ -58,7 +58,7 @@
         if (registeredGuests.includes(formattedGuestName)) {
             // NAMA TERDAFTAR
             
-            // Konversi format nama yang tampil (Budi Santoso)
+            // Konversi format nama yang tampil (Farhan Kurnia)
             const displayGuestName = formattedGuestName
                 .split(' ')
                 .map(word => word.charAt(0).toUpperCase() + word.slice(1))
