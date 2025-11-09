@@ -1,0 +1,259 @@
+    /* 1. Global & Font */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* Ganti font menjadi lebih modern jika tidak ada 'Poppins', fallback ke sans-serif */
+      font-family: 'Poppins', 'Arial', sans-serif;
+    }
+    
+    /* 2. Body & Smooth Background */
+    body {
+      background-color: #03030f;
+      background-image: url('../img/background.png'); /* Ganti nama file gambar background */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; 
+      color: #fff;
+      overflow-x: hidden;
+      transition: background-color 0.5s ease;
+    }
+
+    /* Overlay untuk background smoothing */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2); /* Dibuat lebih gelap */
+      backdrop-filter: blur(2px);
+      z-index: -1;
+    }
+    
+    /* === 3. COVER SECTION (BARU & DIATUR ULANG) === */
+    #cover {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      background-image: url('../img/background.png'); /* Ganti nama file gambar background */
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 1s ease-out, visibility 1s ease-out;
+    }
+    #cover.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    #cover img {
+      max-width: 90%;
+      width: 500px; /* Kontrol ukuran logo cover */
+      height: auto;
+      margin-bottom: 50px; 
+    }
+    /* Style untuk nama tamu (BARU) */
+    #guest-name {
+        font-size: 1.8rem; /* Dibuat lebih besar */
+        color: #ddd;
+        margin-bottom: 30px;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Efek glow halus */
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+    #open-button {
+      padding: 15px 40px; /* Dibuat lebih besar */
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: #00c8ff;
+      border: none;
+      border-radius: 8px; /* Sudut lebih lembut */
+      cursor: pointer;
+      box-shadow: 0 0 20px #00c8ff, 0 0 8px #00c8ff inset; /* Glow lebih kuat */
+      transition: background-color 0.3s, box-shadow 0.3s, opacity 0.3s;
+      text-transform: uppercase;
+    }
+    /* =============================== */
+
+    /* 4. Header (Full Screen) */
+    header {
+      height: 100vh;
+      background: url('background.png') center/cover no-repeat; /* Menggunakan background umum */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+      position: relative;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.2);
+      z-index: 0;
+    }
+
+    /* Style untuk Sub-Judul (Tagline) */
+    header h2 { 
+      position: relative;
+      z-index: 1;
+      font-size: 2.5rem; /* Dibuat lebih besar */
+      color: #ffffff;
+      text-shadow: 0 0 20px rgba(0, 200, 255, 0.7);
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* 5. Perindahan Countdown (BARU) */
+    #countdown {
+      position: relative;
+      z-index: 1;
+      font-size: 2.8rem;
+      color: #ffaa00;
+      font-weight: bold;
+      margin-top: 30px;
+      padding: 15px 30px; /* Padding untuk kotak countdown */
+      background: rgba(20, 20, 40, 0.8); /* Background semi-transparan */
+      border-radius: 50px;
+      border: 2px solid #ffaa00;
+      box-shadow: 0 0 20px rgba(255, 170, 0, 0.8); /* Efek glow */
+    }
+
+    /* Sisa Section (Sama seperti sebelumnya) */
+    .section {
+      min-height: 100vh;
+      padding: 80px 10%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .section-content {
+      max-width: 900px;
+    }
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 30px;
+      color: #A8A499;
+      text-shadow: 0 0 10px lab(74.25% 25.5 78.51 / 0.521);
+    }
+    p {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: #e0e0e0;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.2rem;
+      color: #e0e0e0;
+      text-align: left;
+      margin-top: 20px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    li {
+      margin-bottom: 10px;
+      padding-left: 1.5em;
+      position: relative;
+    }
+    li::before {
+      content: '⚡';
+      color: #00c8ff;
+      position: absolute;
+      left: 0;
+    }
+    iframe {
+      border: 3px solid #00c8ff;
+      border-radius: 15px;
+      margin-top: 30px;
+      box-shadow: 0 0 30px rgba(0, 200, 255, 0.7);
+      width: 100%;
+      max-width: 700px;
+      height: 400px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* 6. Responsive Design */
+    @media (max-width: 1024px) {
+      header h2 { font-size: 2rem; }
+      #countdown { font-size: 2.2rem; }
+      h2 { font-size: 2.5rem; }
+      p, ul { font-size: 1.1rem; }
+      #guest-name { font-size: 1.5rem; }
+    }
+
+    @media (max-width: 768px) {
+      header h2 { font-size: 1.5rem; }
+      .section { padding: 40px 5%; min-height: 80vh; }
+      h2 { font-size: 2rem; }
+      p, ul { font-size: 1rem; }
+      iframe { height: 250px; }
+      #countdown { font-size: 1.8rem; }
+      #guest-name { font-size: 1.2rem; }
+      #cover img { width: 300px; }
+    }
+
+    @media (max-width: 480px) {
+      header h2 { font-size: 1.2rem; }
+      #countdown { font-size: 1.3rem; padding: 10px 20px; }
+      h2 { font-size: 1.6rem; }
+      p, ul { font-size: 0.9rem; }
+      #guest-name { font-size: 1rem; }
+      #open-button { padding: 10px 25px; font-size: 1.1rem; }
+    }
+
+    /* === 6. FOOTER BARU === */
+    footer {
+        background-color: #0d0d1a;
+        padding: 20px 10%;
+        text-align: center;
+        border-top: 1px solid rgba(0, 200, 255, 0.2);
+        font-size: 0.9rem;
+        color: #888;
+        margin-top: 50px; /* Jarak dari section terakhir */
+    }
+    footer p {
+        margin: 0;
+        line-height: 1.5;
+        font-size: 0.9rem; /* Override font-size p di global */
+    }
+    footer a {
+        color: #00c8ff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    footer a:hover {
+        color: #fff;
+    }
+    /* ======================= */
