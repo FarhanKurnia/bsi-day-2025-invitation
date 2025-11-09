@@ -8,7 +8,7 @@
     font-family: 'Poppins', 'Arial', sans-serif;
 }
 
-/* ⚠️ ATURAN EMAS RESPONSIVE UNTUK SEMUA GAMBAR (IMG) */
+/* ATURAN EMAS RESPONSIVE UNTUK SEMUA GAMBAR (IMG) */
 img {
     max-width: 100%; /* Gambar tidak akan melebihi lebar kontainernya */
     height: auto;    /* Menjaga rasio aspek gambar */
@@ -18,11 +18,9 @@ img {
 /* 2. Body & Smooth Background */
 body {
     background-color: #03030f;
-    /* JALUR BACKGROUND DIBUAT RELATIF */
-    background-image: url('../img/background.png'); 
+    background-image: url('../img/background-main.jpg'); 
     background-size: cover;
     background-position: center;
-    /* Ubah fixed ke scroll untuk performa mobile yang lebih baik */
     background-attachment: scroll; 
     color: #fff;
     overflow-x: hidden;
@@ -50,7 +48,6 @@ body::before {
     width: 100%;
     height: 100%;
     background-color: #000000;
-    /* JALUR BACKGROUND COVER DIBUAT RELATIF */
     background-image: url('../img/background.png'); 
     background-size: cover; 
     background-repeat: no-repeat; /* Pastikan tidak berulang */
@@ -99,8 +96,7 @@ body::before {
 /* 4. Header (Full Screen) */
 header {
     height: 100vh;
-    /* JALUR BACKGROUND HEADER DIBUAT RELATIF */
-    background: url('../img/background.jpg') center/cover no-repeat; 
+    background: url('../img/background-main.jpg') center/cover no-repeat; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -191,6 +187,262 @@ iframe {
     height: 400px;
 }
 
+/* === SUSUNAN PANITIA GRID === */
+.committee-grid {
+    display: grid;
+    /* Membuat kolom otomatis, minimum 200px lebar per kartu */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 30px 20px; /* Jarak baris dan kolom */
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.committee-member.member-card {
+    /* Menghapus padding dan background default dari .committee-member sebelumnya */
+    padding: 0;
+    background: none; 
+    border-radius: 0;
+    box-shadow: none;
+    text-align: center;
+    overflow: hidden; /* Penting untuk gambar yang akan menutupi kartu */
+    position: relative;
+}
+
+.member-card .avatar {
+    /* Gambar menutupi sebagian besar kartu */
+    width: 100%;
+    height: 280px; /* Tinggi tetap agar tampilan seragam */
+    object-fit: cover;
+    object-position: top center; /* Fokus di wajah */
+    border-radius: 8px; /* Sudut sedikit melengkung */
+    border: none; /* Hilangkan border lingkaran */
+    margin: 0;
+    display: block;
+    filter: brightness(0.9); /* Sedikit redup agar teks lebih menonjol */
+    transition: filter 0.3s ease;
+}
+
+.member-card:hover .avatar {
+    filter: brightness(1);
+}
+
+.member-card .info-box {
+    /* Kotak Info di Bawah Gambar */
+    position: relative;
+    padding: 15px 10px;
+    background-color: rgba(30, 30, 50, 0.8); /* Background gelap */
+    text-align: left;
+    /* Border top sebagai garis pemisah */
+    border-top: 3px solid #00c8ff; 
+    z-index: 5;
+    margin-top: -10px; /* Sedikit tumpang tindih dengan gambar */
+}
+
+.member-card h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0;
+}
+
+.member-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #ccc;
+    font-weight: 300;
+    margin: 0; /* Hilangkan margin p global */
+}
+
+/* === DO'S AND DON'TS STYLING === */
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 50px; /* Jarak lebih besar dari judul ke kotak aturan */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rules-container {
+    display: flex; 
+    gap: 40px; /* Jarak antar kolom diperbesar */
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px; /* Lebar maksimum section diperbesar */
+    margin-top: 30px;
+}
+
+.rules-column {
+    flex: 1;
+    padding: 30px;
+    border-radius: 12px; /* Sudut lebih melengkung */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent; /* Border default transparan */
+}
+
+/* Hover Effect */
+.rules-column:hover {
+    transform: translateY(-5px);
+}
+
+.rules-column h3 {
+    font-size: 1.6rem; /* Ukuran judul lebih besar */
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid; /* Garis pemisah lebih tebal */
+    text-align: center;
+}
+
+/* Styling Khusus untuk Do's (Hijau Positif) */
+.do-list {
+    background-color: rgba(0, 150, 0, 0.1);
+    border-color: #00c853; 
+    box-shadow: 0 0 15px rgba(0, 200, 83, 0.4); /* Shadow hijau */
+}
+.do-list h3 {
+    color: #00c853;
+    border-color: #00c853;
+}
+.do-list:hover {
+    box-shadow: 0 0 25px rgba(0, 200, 83, 0.7);
+}
+
+/* Styling Khusus untuk Don'ts (Merah Peringatan) */
+.dont-list {
+    background-color: rgba(150, 0, 0, 0.1);
+    border-color: #d50000;
+    box-shadow: 0 0 15px rgba(213, 0, 0, 0.4); /* Shadow merah */
+}
+.dont-list h3 {
+    color: #d50000;
+    border-color: #d50000;
+}
+.dont-list:hover {
+    box-shadow: 0 0 25px rgba(213, 0, 0, 0.7);
+}
+
+.rules-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rules-column li {
+    font-size: 1.15rem; /* Ukuran teks sedikit diperbesar */
+    line-height: 1.6;
+    margin-bottom: 20px; /* Jarak antar item diperbesar */
+    text-align: left;
+    display: flex;
+    align-items: flex-start; /* Alignment di bagian atas ikon */
+}
+
+.rules-column li span {
+    font-size: 1.8rem; /* Ukuran ikon lebih besar */
+    margin-right: 18px;
+    line-height: 1;
+    flex-shrink: 0; /* Pastikan ikon tidak menyusut */
+}
+
+/* === RUNDOWN ACARA (TIMELINE) STYLING === */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Garis Vertikal Utama Timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #00c8ff; /* Warna garis timeline */
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Posisikan di tengah layar besar */
+    margin-left: -1.5px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%; /* Setiap item mengambil setengah lebar timeline */
+}
+
+/* Item di Kiri */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+/* Item di Kanan */
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+/* Titik (Circle) di Garis Tengah */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -7.5px;
+    background-color: #0d0d1a;
+    border: 3px solid #ffaa00; /* Warna titik */
+    top: 15px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+/* Titik untuk Item di Kanan */
+.timeline-item:nth-child(even)::after {
+    left: -7.5px;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: rgba(30, 30, 50, 0.7);
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    transform: scale(1.03);
+    box-shadow: 0 8px 15px rgba(0, 200, 255, 0.5);
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    color: #00c8ff;
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 0;
+}
+
+.timeline-time {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffaa00;
+    margin-bottom: 5px;
+}
+
+/* Styling Khusus Item Break (Istirahat) */
+.break-item .timeline-content {
+    background-color: rgba(100, 50, 0, 0.7); /* Warna berbeda untuk break */
+    border: 1px solid #ffaa00;
+}
+.break-item::after {
+    border-color: #fff; /* Titik putih */
+}
+
+
 /* 6. Responsive Design (Media Queries Diperbarui) */
 @media (max-width: 1024px) {
     header h2 { font-size: 2rem; }
@@ -213,6 +465,65 @@ iframe {
     #cover img { width: 250px; margin-bottom: 30px; }
     header img { width: 80%; max-width: 400px; }
     ul { padding-left: 0; }
+    .committee-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .member-card .avatar {
+        height: 220px;
+    }
+    .member-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .rules-container {
+        flex-direction: column; /* Ubah ke kolom tunggal */
+        gap: 30px;
+    }
+    .rules-column {
+        padding: 25px;
+    }
+    .rules-column h3 {
+        font-size: 1.4rem;
+    }
+    .rules-column li {
+        font-size: 1.05rem;
+    }
+
+    /* Timeline menjadi satu kolom vertikal di mobile */
+    .timeline::before {
+        left: 20px; /* Garis dipindah ke kiri */
+    }
+    
+    .timeline-item {
+        width: 100%; /* Setiap item mengambil seluruh lebar */
+        padding-left: 50px; /* Ruang untuk garis dan titik */
+        padding-right: 15px;
+    }
+    
+    /* Posisikan semua item dan titik ke kiri */
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+        text-align: left;
+    }
+    
+    /* Posisikan semua titik ke kiri */
+    .timeline-item::after,
+    .timeline-item:nth-child(even)::after {
+        left: 13px;
+        right: auto;
+    }
+
+    .timeline-content {
+        margin-top: 15px;
+    }
+    
+    .timeline-time {
+        position: absolute;
+        top: 0;
+        left: 50px;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -226,6 +537,35 @@ iframe {
     p, ul { font-size: 0.9rem; }
     #guest-name { font-size: 1rem; }
     #open-button { padding: 10px 25px; font-size: 1.1rem; }
+
+    .committee-grid {
+        /* Kembali ke 2 kolom di ponsel */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 10px;
+    }
+    .member-card .avatar {
+        height: 180px;
+    }
+    .member-card .info-box {
+        padding: 10px 5px;
+    }
+    .member-card h3 {
+        font-size: 0.9rem;
+    }
+    .member-card p {
+        font-size: 0.75rem;
+    }
+
+     .rules-column li {
+        font-size: 0.95rem;
+    }
+    .rules-column li span {
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+    .rules-column h3 {
+        font-size: 1.2rem;
+    }
 }
 
 /* === FOOTER === */
