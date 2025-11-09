@@ -1,57 +1,4 @@
-# 🚀 Undangan Digital BSI Day 2025: Clash of Mind
-
-Undangan digital interaktif untuk acara tahunan Badan Sistem Informasi (BSI) Day 2025 dengan tema **"Clash of Mind: Smart Battle"**.
-
-## Fitur Utama
-
-* **Personalisasi:** Otomatis menampilkan nama tamu undangan berdasarkan parameter URL.
-* **Validasi Tamu:** Memeriksa nama tamu terdaftar melalui file `registered_guests.json`.
-* **Countdown:** Hitung mundur menuju tanggal dan waktu acara.
-* **Scroll Reveal:** Animasi halus saat menggulir ke setiap bagian.
-
-## 🔗 Cara Mengakses
-
-Akses undangan melalui tautan utama dengan menambahkan parameter nama tamu:
-Tentu\! Menambahkan *file* **`.gitignore`** dan **`README.md`** adalah langkah penting untuk menjaga kebersihan *repository* GitHub Anda dan memberikan panduan bagi pengguna.
-
------
-
-## 📄 Membuat `.gitignore`
-
-*File* `.gitignore` memberi tahu Git *file* mana yang harus **diabaikan** dan tidak perlu di-*upload* ke *repository* (contoh: *file* konfigurasi lokal atau *cache*).
-
-Untuk proyek undangan berbasis HTML/CSS/JS, *file* yang sering diabaikan adalah *file* yang dibuat oleh *code editor* lokal (seperti VS Code) atau file konfigurasi proyek.
-
-Buat *file* baru bernama **`.gitignore`** di *root folder* proyek Anda dan isi dengan konten berikut:
-
-```gitignore
-# File Konfigurasi Editor (Contoh: VS Code)
-.vscode/
-
-# File Konfigurasi IDE/System
-.DS_Store
-Thumbs.db
-
-# Dependency (Jika di masa depan menggunakan Node.js/npm)
-# node_modules
-
-# Temporary Files
-*.log
-*.tmp
-```
-
-**Catatan:** Jika Anda menggunakan *live server* di VS Code (seperti yang ditunjukkan oleh URL `http://127.0.0.1:5500/`), tidak ada *file* yang wajib diabaikan. `.gitignore` di atas adalah standar yang baik untuk memulai.
-
------
-
-## 📝 Membuat `README.md`
-
-*File* `README.md` adalah halaman depan *repository* Anda di GitHub. Ini harus memberikan informasi ringkas tentang proyek dan cara menggunakannya.
-
-Buat *file* baru bernama **`README.md`** di *root folder* proyek Anda dan isi dengan konten berikut (Anda dapat menyesuaikan isinya):
-
-```markdown
-# 🚀 Undangan Digital BSI Day 2025: Clash of Mind
+# Undangan Digital BSI Day 2025: Clash of Mind
 
 Undangan digital interaktif untuk acara tahunan Badan Sistem Informasi (BSI) Day 2025 dengan tema **"Clash of Mind: Smart Battle"**.
 
@@ -108,4 +55,4 @@ Setelah Anda membuat kedua *file* tersebut di *root folder* proyek Anda, jalanka
     ```
 
 Apakah Anda ingin memastikan bahwa semua *file* CSS, JS, dan gambar Anda dipisahkan ke dalam *folder* terpisah sebelum Anda *upload* ke GitHub?
-````
+````å
