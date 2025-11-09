@@ -18,7 +18,7 @@ img {
 /* 2. Body & Smooth Background */
 body {
     background-color: #03030f;
-    background-image: url('../img/background-main.jpg'); 
+    background-image: url('../img/background-main.png'); 
     background-size: cover;
     background-position: center;
     background-attachment: scroll; 
@@ -96,7 +96,7 @@ body::before {
 /* 4. Header (Full Screen) */
 header {
     height: 100vh;
-    background: url('../img/background-main.jpg') center/cover no-repeat; 
+    background: url('../img/background-main.png') center/cover no-repeat; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -342,6 +342,195 @@ iframe {
     flex-shrink: 0; /* Pastikan ikon tidak menyusut */
 }
 
+/* style.css (Revisi di bagian KETENTUAN HADIAH STYLING) */
+
+/* === KETENTUAN HADIAH STYLING (#prizes) === */
+
+.section-content h2.prizes-title { /* Jika Anda memberi class pada h2 di HTML, jika tidak, gunakan h2 di konteks #prizes */
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    margin-bottom: 40px;
+}
+
+.prizes-rules-list {
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Jarak antar blok aturan */
+}
+
+/* KOTAK ATURAN UMUM */
+.prizes-rules-list h3 {
+    font-size: 1.5rem;
+    color: #ffaa00; 
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffaa00;
+}
+
+.prizes-rules-list .mechanism,
+.prizes-rules-list .tiers,
+.prizes-rules-list .restrictions {
+    list-style: none;
+    padding: 0;
+    background-color: rgba(30, 30, 50, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* LI elemen di dalam UL */
+.prizes-rules-list li {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding-left: 28px;
+    position: relative;
+    color: #f0f0ff;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+}
+
+.prizes-rules-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+/* Custom Bullet Point Ikon */
+.prizes-rules-list li::before {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    top: 0;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+/* --- TIER MEKANISME (Warna Biru) --- */
+.mechanism li::before {
+    content: '🏷️'; 
+    color: #00c8ff;
+}
+
+/* --- TIER HADIAH & DISTRIBUSI (Warna Emas) --- */
+.tiers {
+    /* Background kartu tier berbeda agar menonjol */
+    background-color: rgba(50, 40, 20, 0.9);
+    border: 1px solid #ffaa00;
+}
+.tiers h3 {
+    color: #ffaa00;
+    border-bottom: 2px solid #ffaa00;
+}
+.tiers li::before {
+    content: '✨'; 
+    color: #ffaa00;
+}
+
+/* --- TIER BATASAN (Warna Merah Peringatan) --- */
+.restrictions {
+    /* Background kartu batasan berbeda */
+    background-color: rgba(40, 20, 20, 0.9);
+    border: 1px solid #ff1744;
+}
+.restrictions h3 {
+    color: #ff1744;
+    border-bottom: 2px solid #ff1744;
+}
+.restrictions li::before {
+    content: '🛑';
+    color: #ff1744;
+}
+
+
+.final-note {
+    background-color: rgba(255, 170, 0, 0.1);
+    border: 2px solid #ffaa00; /* Border lebih tebal */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 170, 0, 0.5); /* Efek glow peringatan */
+}
+
+.final-note p {
+    font-weight: bold;
+    color: #ffaa00;
+    font-size: 1.2rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* style.css (Tambahkan di bagian umum setelah styling section #prizes) */
+
+/* === NOMINASI PENGHARGAAN STYLING (#awards) === */
+
+.awards-grid {
+    display: grid;
+    /* Atur agar ada 3 kolom di desktop, minimum 250px per kolom */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px;
+    margin: 50px auto;
+    padding: 0 5%;
+}
+
+.award-card {
+    background-color: rgba(30, 40, 60, 0.95);
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #00c8ff; /* Border Biru Neon */
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.4); /* Glow Biru */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 200, 255, 0.7);
+}
+
+.award-card .icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.award-card h3 {
+    font-size: 1.6rem;
+    color: #ffaa00; /* Kuning Emas untuk judul kategori */
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ffaa00;
+}
+
+.award-card p {
+    font-size: 1.05rem;
+    color: #ccc;
+    margin: 5px 0;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+.voting-info {
+    margin-top: 50px;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #00c8ff;
+    text-shadow: 0 0 5px rgba(0, 200, 255, 0.3);
+}
+
 /* === RUNDOWN ACARA (TIMELINE) STYLING === */
 .timeline {
     position: relative;
@@ -524,6 +713,12 @@ iframe {
         left: 50px;
         font-size: 1rem;
     }
+
+    .awards-grid {
+        /* Di tablet/mobile, ubah menjadi 2 kolom atau 1 kolom */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+        gap: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -565,6 +760,33 @@ iframe {
     }
     .rules-column h3 {
         font-size: 1.2rem;
+    }
+     .prizes-rules-list {
+        gap: 20px;
+    }
+    .prizes-rules-list li {
+        font-size: 0.95rem;
+    }
+    .prizes-rules-list h3 {
+        font-size: 1.3rem;
+    }
+    .final-note p {
+        font-size: 1.05rem;
+    }
+    .awards-grid {
+        /* Di layar kecil, paksa 1 kolom penuh */
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .award-card {
+        padding: 20px 15px;
+        min-height: auto;
+    }
+    .award-card h3 {
+        font-size: 1.4rem;
+    }
+    .award-card p {
+        font-size: 0.95rem;
     }
 }
 

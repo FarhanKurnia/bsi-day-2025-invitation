@@ -27,7 +27,7 @@ const validateGuest = async () => {
     // 1. Dapatkan daftar tamu dari file JSON
     let registeredGuests = [];
     try {
-        const response = await fetch('registered_guests.json');
+        const response = await fetch('./assets/js/json/registered_guests.json');
         if (!response.ok) {
             throw new Error(`Gagal memuat file JSON: ${response.statusText}`);
         }
@@ -46,7 +46,7 @@ const validateGuest = async () => {
     if (!urlGuestName) {
         guestNameElement.innerHTML = `Kepada Yth. Tamu Undangan`;
         validationMessage.style.display = 'block'; 
-        validationMessage.innerHTML = 'Silakan masukkan nama Anda di URL (Contoh: ?name=budi santoso).';
+        validationMessage.innerHTML = 'Silakan masukkan nama Anda di URL (Contoh: ?name=farhan kurnia).';
         openButton.style.opacity = 0.5;
         return;
     }
@@ -58,7 +58,7 @@ const validateGuest = async () => {
     if (registeredGuests.includes(formattedGuestName)) {
         // NAMA TERDAFTAR
         
-        // Konversi format nama yang tampil (Budi Santoso)
+        // Konversi format nama yang tampil (Farhan Kurnia)
         const displayGuestName = formattedGuestName
             .split(' ')
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -133,3 +133,49 @@ const revealOnScroll = () => {
   });
 };
 window.addEventListener('scroll', revealOnScroll);
+
+// Tempatkan kode ini di file script.js Anda, atau di dalam tag <script> di index.html
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Pastikan DOM sudah dimuat sebelum menjalankan kode
+    
+    // ... (kode validasi, countdown, dan open button lainnya) ...
+
+    // --- FUNGSI DINAMIS PANITIA ---
+    const loadCommitteeMembers = async () => {
+        const committeeGrid = document.getElementById('committeeGrid');
+
+        try {
+            // Ambil data dari file JSON
+            const response = await fetch('./assets/js/json/committee_members.json'); 
+            const members = await response.json();
+
+            let committeeHTML = '';
+            
+            // Loop melalui setiap anggota
+            members.forEach(member => {
+                committeeHTML += `
+                    <div class="committee-member member-card">
+                        <img src="assets/img/committee/${member.img}" alt="${member.name}" class="avatar">
+                        <div class="info-box">
+                            <h3>${member.name}</h3>
+                            <p>${member.role}</p>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Masukkan HTML yang sudah dibuat ke dalam container
+            committeeGrid.innerHTML = committeeHTML;
+
+        } catch (error) {
+            console.error('Gagal memuat data panitia:', error);
+            committeeGrid.innerHTML = '<p>Gagal memuat daftar panitia. Silakan coba lagi nanti.</p>';
+        }
+    };
+
+    // Panggil fungsi untuk memuat panitia
+    loadCommitteeMembers();
+    
+    // ... (kode scroll reveal lainnya) ...
+});

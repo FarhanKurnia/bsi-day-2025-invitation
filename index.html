@@ -17,7 +17,6 @@
     <span id="validation-message" style="color: red; font-size: 1.1rem; margin-bottom: 20px; display: none;">
       Nama tidak terdaftar sebagai tamu undangan.
     </span>
-
     <button id="open-button" disabled style="opacity: 0.5;">Buka Undangan</button>
   </div>
   
@@ -35,9 +34,9 @@
     </div>
   </section>
 
-  <section class="section" id="committee">
+<!--   <section class="section" id="committee">
     <div class="section-content">
-      <h2>Panitia</h2>
+      <h2>Panitia Acara</h2>
       <div class="committee-grid">
         <div class="committee-member member-card">
           <img src="assets/img/committee/Farhan.png" alt="Farhan Kurnia" class="avatar">
@@ -161,82 +160,137 @@
         
         </div>
     </div>
-  </section>
-
-<!--   <section class="section" id="rundown">
-    <div class="section-content">
-      <h2>Rundown Acara</h2>
-      <ul>
-        <li>08.00 - Pembukaan dan sambutan</li>
-        <li>09.00 - Battle of Numbers</li>
-        <li>10.00 - Memory Clash</li>
-        <li>11.00 - The Matrix Challenge</li>
-        <li>12.00 - Istirahat dan makan siang</li>
-        <li>13.00 - Final Round & Pengumuman Pemenang</li>
-        <li>14.00 - Penutupan</li>
-      </ul>
-    </div>
   </section> -->
+
+  <section class="section" id="committee">
+    <div class="section-content">
+      <h2>Panitia Acara</h2>
+      <div class="committee-grid" id="committeeGrid">
+        </div>
+    </div>
+  </section>
 
   <section class="section" id="rundown">
     <div class="section-content">
       <h2>Rundown Acara</h2>
-      
       <div class="timeline">
-        
         <div class="timeline-item">
           <div class="timeline-time">08.00</div>
           <div class="timeline-content">
             <h3>Pembukaan & Sambutan</h3>
-            <p>Registrasi ulang, sambutan dari Ketua BSI, dan pengenalan aturan dasar kompetisi.</p>
+            <p>Registrasi pengambilan nomor undian, pembukaan dan sambutan dari MC.</p>
+          </div>
+        </div>
+
+         <div class="timeline-item">
+          <div class="timeline-time">08.05</div>
+          <div class="timeline-content">
+            <h3>Kultum</h3>
+            <p>Kultum yang akan dibawakan oleh Muhammad Tatmainnul Quluub</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">08.25</div>
+          <div class="timeline-content">
+            <h3>Techtalk</h3>
+            <p>Penyampaian materi techtalk “Design Thinking” oleh Bapak Mukhammad Andri Setiawan, S.T., M.Sc., Ph.D.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">09.30</div>
+          <div class="timeline-content">
+            <h3>Coffee Break</h3>
+            <p>Peserta disilahkan untuk menyantap hidangan ringan sebelum melanjutkan acara</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">09.40</div>
+          <div class="timeline-content">
+            <h3>Pembukaan BSI Day</h3>
+            <p>Pembukaan acara BSI Day oleh pembawa acara dan sambutan oleh Ketua Panitia</p>
           </div>
         </div>
         
         <div class="timeline-item">
-          <div class="timeline-time">09.00</div>
+          <div class="timeline-time">09.50</div>
           <div class="timeline-content">
-            <h3>Battle of Numbers 🔢</h3>
-            <p>Sesi kompetisi pertama yang menguji kecepatan berpikir dan kemampuan analisis numerik.</p>
+            <h3>Think & Guess</h3>
+            <p>Sesi kompetisi pertama dengan menebak jawaban terbanyak dari pertanyaan berdasarkan hasil survei.</p>
           </div>
         </div>
         
         <div class="timeline-item">
-          <div class="timeline-time">10.00</div>
+          <div class="timeline-time">10.30</div>
           <div class="timeline-content">
-            <h3>Memory Clash 🧠</h3>
-            <p>Uji daya ingat dan fokus tim melalui serangkaian tantangan visual dan lisan yang intens.</p>
+            <h3>Smart Battle</h3>
+            <p>Sesi kompetisi kedua dengan menguji pengertahuan, perhitungan dan ingatan melalui kerjasama tim.</p>
           </div>
         </div>
         
         <div class="timeline-item">
-          <div class="timeline-time">11.00</div>
+          <div class="timeline-time">11.30</div>
           <div class="timeline-content">
-            <h3>The Matrix Challenge 💡</h3>
-            <p>Tantangan strategi dan logika tim untuk memecahkan kode kompleks dalam waktu terbatas.</p>
+            <h3>Pembagian Hadiah Tier 3 & Tier 2</h3>
+            <p>Peserta diharapkan untuk tidak berpindah posisi dari tempat duduk bersama tim nya karena panitia akan mengantarkan hadiahnya</p>
           </div>
         </div>
 
         <div class="timeline-item break-item">
-          <div class="timeline-time">12.00</div>
+          <div class="timeline-time">11.45</div>
           <div class="timeline-content">
-            <h3>Istirahat & Makan Siang 🍽️</h3>
-            <p>Waktu istirahat dan *networking* sambil menikmati hidangan yang telah disediakan.</p>
+            <h3>ISHOMA</h3>
+            <p>Waktu istirahat, sholat dan mengabadikan dokumentasi dengan tim sambil menikmati hidangan yang telah disediakan.</p>
           </div>
         </div>
         
         <div class="timeline-item">
           <div class="timeline-time">13.00</div>
           <div class="timeline-content">
-            <h3>Final Round & Pemenang 🏆</h3>
+            <h3>Final Round Smart Battle</h3>
             <p>Babak penentuan dan pengumuman tim juara BSI Day 2025: Clash of Mind.</p>
           </div>
         </div>
         
         <div class="timeline-item">
-          <div class="timeline-time">14.00</div>
+          <div class="timeline-time">13.40</div>
           <div class="timeline-content">
-            <h3>Penutupan & Foto Bersama 📸</h3>
-            <p>Sesi penutup, dokumentasi, dan *networking* terakhir.</p>
+            <h3>Pemberian Penghargaan</h3>
+            <p>Pemilihan nominasi penghargaan melalui live voting.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">14.10</div>
+          <div class="timeline-content">
+            <h3>Thankfull</h3>
+            <p>Perwakilan ucapan terima kasih dari member kepada leader.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">14.20</div>
+          <div class="timeline-content">
+            <h3>Pisah Sambut</h3>
+            <p>Perpisahan bersama Member dan Junior Staff Batch 2024 sekaligus sambutan Junior Staff Batch 2025</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">15.15</div>
+          <div class="timeline-content">
+            <h3>Pembagian Hadiah Tier 1</h3>
+            <p>Hadiah akan diundi langsung oleh tim Manajemen</p>
+          </div>
+        </div>
+
+       <div class="timeline-item">
+          <div class="timeline-time">15.55</div>
+          <div class="timeline-content">
+            <h3>Doa bersama dan Penutupan</h3>
+            <p>Mengakhiri kegiatan dengan doa bersama yang dipimpin oleh Andri Heru Saputra, S.Kom., M.Kom.</p>
           </div>
         </div>
 
@@ -246,27 +300,23 @@
 
   <section class="section" id="rules">
     <div class="section-content">
-      <h2>Do's and Dont's (Aturan Acara)</h2>
+      <h2>Do's & Dont's</h2>
       <p class="section-subtitle">Mohon perhatikan panduan berikut agar acara berjalan lancar dan nyaman untuk semua.</p>
-      
       <div class="rules-container">
         <div class="rules-column do-list">
           <h3>✅ Yang Boleh Dilakukan (Do's)</h3>
           <ul>
-            <li><span>🕒</span> Datang tepat waktu (atau 15 menit sebelum acara).</li>
+            <li><span>🕒</span> Datang tepat waktu (pendaftaran undian hadiah akan ditutup pada 08.05 WIB)</li>
             <li><span>👔</span> Mengenakan pakaian rapi (smart casual, hindari kaos dan sandal).</li>
-            <li><span>📱</span> Mengaktifkan mode senyap (silent mode) pada perangkat komunikasi.</li>
             <li><span>🗣️</span> Berpartisipasi aktif dalam setiap kegiatan dan sesi yang ada.</li>
+            <li><span>📸</span> Berfoto bersama tim dan bestie di photobooth yang telah tersedia</li>
           </ul>
         </div>
-        
         <div class="rules-column dont-list">
           <h3>❌ Yang Tidak Boleh Dilakukan (Don'ts)</h3>
           <ul>
-            <li><span>🚬</span> Merokok di dalam area gedung acara.</li>
-            <li><span>📣</span> Membuat kegaduhan yang mengganggu jalannya acara utama.</li>
+            <li><span>🍛</span> Membawa makanan dan minuman ke dalam ruang teatrikal GKU.</li>
             <li><span>🚫</span> Membawa dan mengonsumsi minuman keras atau obat terlarang.</li>
-            <li><span>📸</span> Mengambil foto/video secara berlebihan saat sesi inti berlangsung.</li>
           </ul>
         </div>
         
@@ -274,9 +324,76 @@
     </div>
   </section>
 
+  <section class="section" id="prizes">
+    <div class="section-content">
+      <h2>Ketentuan Pembagian Doorprize</h2>
+      <p class="section-subtitle">Hadiah berasal dari sponsor/vendor. Jumlah dan bentuk hadiah bergantung pada ketersediaan vendor, sehingga tidak semua peserta dijamin mendapat hadiah.</p>
+      <div class="prizes-rules-list">
+        <h3>Mekanisme Undian</h3>
+        <ul class="mechanism">
+          <li>Nomor undian (berupa stiker) akan dibagikan saat presensi Techtalk.</li>
+          <li>Nomor undian harus ditempelkan pada Co-Card Tim dan Nama Undian yang disediakan.</li>
+          <li>Kotak undian akan ditutup tepat pukul 08.05 WIB.</li>
+        </ul>
+        
+        <h3>Tier Hadiah & Distribusi</h3>
+        <ul class="tiers">
+          <li>Hadiah terbagi menjadi 3 Tier (Tier 1, Tier 2, dan Tier 3).</li>
+          <li>Tier 3 & 2 diundi pada awal acara Techtalk dan akan dibagikan ke tiap tim setelah istirahat makan siang.</li>
+          <li>Tier 1 diundi secara eksklusif oleh Tim Manajemen saat acara berlangsung.</li>
+        </ul>
+
+        <h3>Aturan Khusus Tier 1</h3>
+        <ul class="restrictions">
+          <li>Peserta yang telah dipanggil 3x dan tidak merespon** dianggap gugur dan akan diundi ulang.</li>
+          <li>Tim Manajemen, Junior Staff, Kepala Badan/Kabid, dan penerima hadiah Tier 1 tahun sebelumnya, TIDAK berhak memperoleh hadiah Tier 1.</li>
+        </ul>
+
+        <div class="final-note">
+          <p>Keputusan panitia mengenai pembagian hadiah bersifat mutlak dan tidak dapat diganggu gugat.</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="awards">
+    <div class="section-content">
+      <h2>Nominasi Penghargaan</h2>
+      <p class="section-subtitle">Apresiasi untuk individu yang telah menunjukkan dedikasi dan inspirasi sepanjang tahun. Siapakah yang akan memenangkan gelar prestisius ini?</p>
+      <div class="awards-grid">
+        <div class="award-card">
+          <span class="icon">🥇</span>
+          <h3>Performance</h3>
+          <p>Nilai PA Member Tertinggi</p>
+          <p>Nilai PA Leader Tertinggi</p>
+        </div>
+        
+        <div class="award-card">
+          <span class="icon">💡</span>
+          <h3>Inspiratif</h3>
+          <p>Si Paling Inspiratif (Dev)</p>
+          <p>Si Paling Inspiratif (Ops)</p>
+          <p>Si Paling Inspiratif (Perencanaan)</p>
+          <p>Paling Inspiratif (Manajemen)</p>
+        </div>
+
+        <div class="award-card">
+          <span class="icon">👑</span>
+          <h3>Khusus</h3>
+          <p>Kadiv IT Terfavorit</p>
+          <p>Outfit of the Day (OOTD)</p>
+        </div>
+      </div>
+      
+      <p class="voting-info">Pemenang akan diumumkan pada acara puncak BSI Day 2025.</p>
+
+    </div>
+  </section>
+
   <section class="section" id="location">
     <div class="section-content">
-      <h2>Lokasi & Waktu</h2>
+      <h2>Waktu & Tempat</h2>
       <p>📍 Gedung Kuliah Umum (GKU) Lt. 2 - Universitas Islam Indonesia</p>
       <p>🗓 Kamis, 18 Desember 2025</p>
       <p>⏱️ 08.00 - 16.00 WIB</p>

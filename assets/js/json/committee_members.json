@@ -1,0 +1,77 @@
+[
+    {
+        "name": "Farhan Kurnia",
+        "role": "Ketua & Sie Administrasi",
+        "img": "Farhan.png"
+    },
+    {
+        "name": "Kartika Salma",
+        "role": "Sie Acara",
+        "img": "Salma.png"
+    },
+    {
+        "name": "Nutri Ashira",
+        "role": "Sie Acara",
+        "img": "Nuti.png"
+    },
+    {
+        "name": "Nabila Istiqomah",
+        "role": "Sie Dokumentasi",
+        "img": "Bila.png"
+    },
+    {
+        "name": "Faris Rahman",
+        "role": "Sie Dokumentasi",
+        "img": "Faris.png"
+    },
+    {
+        "name": "Zulkarnaen",
+        "role": "Sie Operator Audio Visual",
+        "img": "Zul.png"
+    },
+    {
+        "name": "Muhammad Noer",
+        "role": "Sie Operator Audio Visual",
+        "img": "Noer.png"
+    },
+    {
+        "name": "Syariffah Sekartini",
+        "role": "Sie Properti Dekorasi",
+        "img": "Iffah.png"
+    },
+    {
+        "name": "Aziz Azharudin",
+        "role": "Sie Properti Dekorasi",
+        "img": "Azis.png"
+    },
+    {
+        "name": "Nadira Adiva",
+        "role": "Sie Hadiah & Administrasi",
+        "img": "Adiv.png"
+    },
+    {
+        "name": "Yudhistira Arsya",
+        "role": "Sie Hadiah & Administrasi",
+        "img": "Yudhis.png"
+    },
+    {
+        "name": "Raisha Amini",
+        "role": "Sie Konsumsi",
+        "img": "Raisha.png"
+    },
+    {
+        "name": "Eva Indriyani",
+        "role": "Sie Konsumsi",
+        "img": "Eva.png"
+    },
+    {
+        "name": "Anjeli Puteri",
+        "role": "Pembawa Acara",
+        "img": "Jeli.png"
+    },
+    {
+        "name": "Adhi Wiratomo",
+        "role": "Pembawa Acara",
+        "img": "Tomo.png"
+    }
+]

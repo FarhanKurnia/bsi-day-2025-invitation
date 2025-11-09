@@ -1,6 +1,6 @@
 # Undangan Digital BSI Day 2025: Clash of Mind
 
-Undangan digital interaktif untuk acara tahunan Badan Sistem Informasi (BSI) Day 2025 dengan tema **"Clash of Mind: Smart Battle"**.
+Undangan digital interaktif untuk acara tahunan Badan Sistem Informasi (BSI) Day 2025 dengan tema **"Clash of Mind: Together We Think, Together We Win"**.
 
 ## Fitur Utama
 
@@ -53,6 +53,3 @@ Setelah Anda membuat kedua *file* tersebut di *root folder* proyek Anda, jalanka
     ```bash
     git push origin main
     ```
-
-Apakah Anda ingin memastikan bahwa semua *file* CSS, JS, dan gambar Anda dipisahkan ke dalam *folder* terpisah sebelum Anda *upload* ke GitHub?
-````å
