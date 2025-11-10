@@ -631,7 +631,6 @@ iframe {
     border-color: #fff; /* Titik putih */
 }
 
-
 /* 6. Responsive Design (Media Queries Diperbarui) */
 @media (max-width: 1024px) {
     header h2 { font-size: 2rem; }

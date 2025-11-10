@@ -134,13 +134,7 @@ const revealOnScroll = () => {
 };
 window.addEventListener('scroll', revealOnScroll);
 
-// Tempatkan kode ini di file script.js Anda, atau di dalam tag <script> di index.html
-
 document.addEventListener('DOMContentLoaded', () => {
-    // Pastikan DOM sudah dimuat sebelum menjalankan kode
-    
-    // ... (kode validasi, countdown, dan open button lainnya) ...
-
     // --- FUNGSI DINAMIS PANITIA ---
     const loadCommitteeMembers = async () => {
         const committeeGrid = document.getElementById('committeeGrid');
@@ -174,8 +168,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // --- FUNGSI DINAMIS RUNDOWN ---
+    const loadRundown = async () => {
+        const timelineContainer = document.getElementById('rundownTimeline');
+
+        try {
+            // JALUR FILE JSON RUNDOWN
+            const response = await fetch('./assets/js/json/rundown.json'); 
+            
+            if (!response.ok) {
+                throw new Error(`Gagal memuat file JSON Rundown. Status: ${response.status}`);
+            }
+
+            const events = await response.json();
+
+            let rundownHTML = '';
+            
+            // Loop melalui setiap item acara
+            events.forEach(event => {
+                // Tentukan kelas CSS tambahan jika ini adalah item istirahat (break-item)
+                const itemClass = event.is_break ? 'timeline-item break-item' : 'timeline-item';
+                rundownHTML += `
+                    <div class="${itemClass}">
+                        <div class="timeline-time">${event.time}</div>
+                        <div class="timeline-content">
+                            <h3>${event.title}</h3>
+                            <p>${event.description}</p>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Masukkan HTML yang sudah dibuat ke dalam container
+            timelineContainer.innerHTML = rundownHTML;
+
+        } catch (error) {
+            console.error('Gagal memuat data rundown:', error);
+            timelineContainer.innerHTML = `<p style="color: #ff1744; text-align: center;">[ERROR] Gagal memuat rundown: ${error.message}.</p>`;
+        }
+    };
+
     // Panggil fungsi untuk memuat panitia
     loadCommitteeMembers();
-    
-    // ... (kode scroll reveal lainnya) ...
+    // Panggil fungsi untuk memuat rundown (di bawah pemanggilan loadCommitteeMembers)
+    loadRundown();
 });

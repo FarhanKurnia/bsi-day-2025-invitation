@@ -1,0 +1,79 @@
+[
+    {
+        "time": "08.00",
+        "title": "Pembukaan & Sambutan",
+        "description": "Registrasi pengambilan nomor undian, pembukaan dan sambutan dari MC."
+    },
+    {
+        "time": "08.05",
+        "title": "Kultum",
+        "description": "Kultum yang akan dibawakan oleh Muhammad Tatmainnul Quluub"
+    },
+    {
+        "time": "08.25",
+        "title": "Techtalk",
+        "description": "Penyampaian materi techtalk “Design Thinking” oleh Bapak Mukhammad Andri Setiawan, S.T., M.Sc., Ph.D."
+    },
+    {
+        "time": "09.30",
+        "title": "Coffee Break",
+        "description": "Peserta disilahkan untuk menyantap hidangan ringan sebelum melanjutkan acara",
+        "is_break": true
+    },
+    {
+        "time": "09.40",
+        "title": "Pembukaan BSI Day",
+        "description": "Pembukaan acara BSI Day oleh pembawa acara dan sambutan oleh Ketua Panitia"
+    },
+    {
+        "time": "09.50",
+        "title": "Think & Guess",
+        "description": "Sesi kompetisi pertama dengan menebak jawaban terbanyak dari pertanyaan berdasarkan hasil survei."
+    },
+    {
+        "time": "10.30",
+        "title": "Smart Battle",
+        "description": "Sesi kompetisi kedua dengan menguji pengertahuan, perhitungan dan ingatan melalui kerjasama tim."
+    },
+    {
+        "time": "11.30",
+        "title": "Pembagian Hadiah Tier 3 & Tier 2",
+        "description": "Peserta diharapkan untuk tidak berpindah posisi dari tempat duduk bersama tim nya karena panitia akan mengantarkan hadiahnya"
+    },
+    {
+        "time": "11.45",
+        "title": "ISHOMA",
+        "description": "Waktu istirahat, sholat dan mengabadikan dokumentasi dengan tim sambil menikmati hidangan yang telah disediakan.",
+        "is_break": true
+    },
+    {
+        "time": "13.00",
+        "title": "Final Round Smart Battle",
+        "description": "Babak penentuan dan pengumuman tim juara BSI Day 2025: Clash of Mind."
+    },
+    {
+        "time": "13.40",
+        "title": "Pemberian Penghargaan",
+        "description": "Pemilihan nominasi penghargaan melalui live voting."
+    },
+    {
+        "time": "14.10",
+        "title": "Thankfull",
+        "description": "Perwakilan ucapan terima kasih dari member kepada leader."
+    },
+    {
+        "time": "14.20",
+        "title": "Pisah Sambut",
+        "description": "Perpisahan bersama Member dan Junior Staff Batch 2024 sekaligus sambutan Junior Staff Batch 2025"
+    },
+    {
+        "time": "15.15",
+        "title": "Pembagian Hadiah Tier 1",
+        "description": "Hadiah akan diundi langsung oleh tim Manajemen"
+    },
+    {
+        "time": "15.55",
+        "title": "Doa bersama dan Penutupan",
+        "description": "Mengakhiri kegiatan dengan doa bersama yang dipimpin oleh Andri Heru Saputra, S.Kom., M.Kom."
+    }
+]
