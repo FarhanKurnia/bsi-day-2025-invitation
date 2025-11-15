@@ -6,7 +6,9 @@ const cover = document.getElementById('cover');
 const openButton = document.getElementById('open-button');
 const guestNameElement = document.getElementById('guest-name');
 const validationMessage = document.getElementById('validation-message');
-const audio = document.getElementById('background-audio');
+const backgroundAudio = document.getElementById('background-audio'); // <-- Mengganti nama variabel
+const championsAudio = document.getElementById('champions-audio'); // <-- TAMBAHKAN
+const gameBeginsAudio = document.getElementById('game-begins-audio'); // <-- TAMBAHKAN
 
 // FUNGSI UNTUK MENGAMBIL PARAMETER DARI URL
 const getParameterByName = (name, url = window.location.href) => {
@@ -81,21 +83,39 @@ const validateGuest = async () => {
 // Panggil fungsi validasi segera setelah halaman dimuat
 validateGuest();
 
+// === IMPLEMENTASI SUARA 1: Champions are you ready (On Load) ===
+if (championsAudio) {
+    championsAudio.volume = 1; 
+    // PENTING: Browser kemungkinan besar akan memblokir autoplay ini
+    championsAudio.play().catch(error => {
+        // console.warn("Browser memblokir autoplay 'championsAudio'.");
+    });
+}
+
 // === JAVASCRIPT UNTUK COVER & AUDIO (Open Button Listener) ===
 openButton.addEventListener('click', () => {
   if(openButton.disabled) return; 
 
-  // 1. Sembunyikan Cover
-  cover.classList.add('hidden');
+  // 1. MAINKAN SUARA 2: Let the game begins (one-shot)
+  if (gameBeginsAudio) {
+      gameBeginsAudio.volume = 1;
+      gameBeginsAudio.play().catch(error => {
+          console.error("Gagal memainkan gameBeginsAudio:", error);
+      });
+  }
   
-  // 2. Mainkan Audio
-  audio.play().catch(error => {
-    console.log("Audio autoplay failed:", error);
+  // 2. MAINKAN SUARA 3: Background Audio (looping)
+  backgroundAudio.play().catch(error => { 
+    console.log("Background Audio autoplay failed:", error);
   });
 
-  // 3. Panggil fungsi scroll reveal 
+  // 3. Sembunyikan Cover
+  cover.classList.add('hidden');
+  
+  // 4. Panggil fungsi scroll reveal 
   setTimeout(revealOnScroll, 1000); 
 });
+// ...
 
 // Count Down Logic
 const countDownDate = new Date("Dec 18, 2025 08:00:00").getTime();
