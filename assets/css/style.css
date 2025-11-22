@@ -342,10 +342,7 @@ iframe {
     flex-shrink: 0; /* Pastikan ikon tidak menyusut */
 }
 
-/* style.css (Revisi di bagian KETENTUAN HADIAH STYLING) */
-
 /* === KETENTUAN HADIAH STYLING (#prizes) === */
-
 .section-content h2.prizes-title { /* Jika Anda memberi class pada h2 di HTML, jika tidak, gunakan h2 di konteks #prizes */
     margin-bottom: 20px;
 }
@@ -468,8 +465,6 @@ iframe {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
-/* style.css (Tambahkan di bagian umum setelah styling section #prizes) */
 
 /* === NOMINASI PENGHARGAAN STYLING (#awards) === */
 
@@ -631,6 +626,102 @@ iframe {
     border-color: #fff; /* Titik putih */
 }
 
+/* === GAMES GRID STYLING === */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.game-card {
+    /* Gunakan A tag sebagai card, hilangkan dekorasi */
+    text-decoration: none;
+    color: inherit; 
+    display: block; 
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    /* Shadow Biru Neon saat di hover */
+    box-shadow: 0 10px 30px rgba(0, 200, 255, 0.7); 
+}
+
+.game-card img {
+    width: 100%;
+    height: 300px; /* Tinggi seragam untuk semua card */
+    object-fit: cover;
+    filter: brightness(0.7); /* Redupkan gambar agar overlay menonjol */
+    transition: filter 0.3s ease;
+}
+
+.game-card:hover img {
+    filter: brightness(1);
+}
+
+/* --- LOCK OVERLAY (Efek Terkunci) --- */
+.lock-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradient gelap semi-transparan dari bawah ke atas */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)); 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Posisikan konten di bawah */
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    border: 3px solid #ffaa00; /* Border Emas Tanda Terkunci */
+    box-shadow: 0 0 15px rgba(255, 170, 0, 0.5);
+}
+
+.lock-icon {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: #ffaa00; /* Warna Emas */
+    /* Animasi denyut (pulse) ringan */
+    animation: pulse 1.5s infinite; 
+}
+
+.lock-overlay h4 {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    color: #ffaa00;
+}
+
+.lock-overlay p {
+    font-size: 0.95rem; /* Ukuran font bisa disesuaikan */
+    color: #ddd;
+    margin: 10px 0; /* Tambahkan margin vertikal agar tidak terlalu rapat */
+    max-width: 250px; /* Batasi lebar teks agar tidak terlalu panjang */
+    line-height: 1.4;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.9; }
+}
+
+/* === SECTION: GAMES === */
+/* Gunakan pseudo-element :after dan :before untuk Tooltip */
+/* Modifikasi gaya p di lock-overlay agar teks terlihat lebih baik */
+
+
+
 /* 6. Responsive Design (Media Queries Diperbarui) */
 @media (max-width: 1024px) {
     header h2 { font-size: 2rem; }
@@ -717,6 +808,14 @@ iframe {
         /* Di tablet/mobile, ubah menjadi 2 kolom atau 1 kolom */
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
         gap: 20px;
+    }
+
+    /* Responsive untuk Section Games */
+    .games-grid {
+        grid-template-columns: 1fr; /* Satu kolom penuh di mobile */
+    }
+    .game-card img {
+        height: 250px;
     }
 }
 
