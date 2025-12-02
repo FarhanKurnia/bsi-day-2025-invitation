@@ -5,7 +5,7 @@
         "description": "Registrasi pengambilan nomor undian, pembukaan dan sambutan dari MC."
     },
     {
-        "time": "08.05",
+        "time": "08.15",
         "title": "Kultum",
         "description": "Kultum yang akan dibawakan oleh Muhammad Tatmainnul Quluub"
     },
@@ -26,22 +26,22 @@
         "description": "Pembukaan acara BSI Day oleh pembawa acara dan sambutan oleh Ketua Panitia"
     },
     {
-        "time": "09.50",
+        "time": "10.15",
         "title": "Think & Guess",
         "description": "Sesi kompetisi pertama dengan menebak jawaban terbanyak dari pertanyaan berdasarkan hasil survei."
     },
     {
-        "time": "10.30",
+        "time": "10.50",
         "title": "Smart Battle",
         "description": "Sesi kompetisi kedua dengan menguji pengertahuan, perhitungan dan ingatan melalui kerjasama tim."
     },
     {
-        "time": "11.30",
+        "time": "11.45",
         "title": "Pembagian Hadiah Tier 3 & Tier 2",
         "description": "Peserta diharapkan untuk tidak berpindah posisi dari tempat duduk bersama tim nya karena panitia akan mengantarkan hadiahnya"
     },
     {
-        "time": "11.45",
+        "time": "12.00",
         "title": "ISHOMA",
         "description": "Waktu istirahat, sholat dan mengabadikan dokumentasi dengan tim sambil menikmati hidangan yang telah disediakan.",
         "is_break": true
@@ -67,12 +67,12 @@
         "description": "Perpisahan bersama Member dan Junior Staff Batch 2024 sekaligus sambutan Junior Staff Batch 2025"
     },
     {
-        "time": "15.15",
+        "time": "14.40",
         "title": "Pembagian Hadiah Tier 1",
         "description": "Hadiah akan diundi langsung oleh tim Manajemen"
     },
     {
-        "time": "15.55",
+        "time": "15.20",
         "title": "Doa bersama dan Penutupan",
         "description": "Mengakhiri kegiatan dengan doa bersama yang dipimpin oleh Andri Heru Saputra, S.Kom., M.Kom."
     }
