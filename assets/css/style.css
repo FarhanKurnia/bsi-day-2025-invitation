@@ -167,7 +167,7 @@ header h2 {
     transform: translateY(0);
 }
 .section-content {
-    max-width: 900px;
+    /* max-width: 900px; */
     width: 100%; /* Pastikan konten section mengisi lebar */
 }
 h2 {
@@ -693,6 +693,23 @@ iframe {
     }
 }
 
+/* === GAYA KHUSUS UNTUK VERSI MOBILE (Gambar Fokus Tunggal) === */
+
+.mobile-focus-image-container {
+    width: 100%;
+    max-width: 450px; /* Batasan lebar agar gambar tidak terlalu besar di mobile */
+    margin: 30px auto;
+    text-align: center;
+}
+
+.mobile-challenge-graphic {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px rgba(0, 150, 255, 0.4));
+}
+
 /* === GAMES GRID STYLING === */
 .games-grid {
     display: grid;
@@ -889,6 +906,15 @@ iframe {
 /* === SECTION: GAMES === */
 /* Gunakan pseudo-element :after dan :before untuk Tooltip */
 /* Modifikasi gaya p di lock-overlay agar teks terlihat lebih baik */
+
+/* KUNCI: Menampilkan/Menyembunyikan Konten */
+.mobile-only {
+    display: none; /* Default: Sembunyikan di Desktop */
+}
+
+.desktop-only {
+    display: block; /* Default: Tampilkan di Desktop */
+}
 
 
 
@@ -1113,4 +1139,24 @@ footer a {
 }
 footer a:hover {
     color: #fff;
+}
+
+/* KUNCI VISIBILITAS */
+.mobile-only {
+    display: none; /* Default: Sembunyikan versi mobile di desktop */
+}
+
+.desktop-only {
+    display: block; /* Default: Tampilkan versi desktop */
+}
+
+/* === MEDIA QUERY UNTUK TOGGLE VISIBILITAS === */
+@media (max-width: 900px) {
+    /* Pada Mobile, Balikkan Tampilan */
+    .mobile-only {
+        display: block !important; /* Tampilkan Versi Mobile */
+    }
+    .desktop-only {
+        display: none !important; /* Sembunyikan Versi Desktop */
+    }
 }
