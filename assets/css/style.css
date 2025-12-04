@@ -8,6 +8,15 @@
     font-family: 'Poppins', 'Arial', sans-serif;
 }
 
+/* KUNCI: Menampilkan/Menyembunyikan Konten */
+.mobile-only {
+    display: none; /* Default: Sembunyikan di Desktop */
+}
+
+.desktop-only {
+    display: block; /* Default: Tampilkan di Desktop */
+}
+
 /* ATURAN EMAS RESPONSIVE UNTUK SEMUA GAMBAR (IMG) */
 img {
     max-width: 100%; /* Gambar tidak akan melebihi lebar kontainernya */
@@ -907,15 +916,6 @@ iframe {
 /* Gunakan pseudo-element :after dan :before untuk Tooltip */
 /* Modifikasi gaya p di lock-overlay agar teks terlihat lebih baik */
 
-/* KUNCI: Menampilkan/Menyembunyikan Konten */
-.mobile-only {
-    display: none; /* Default: Sembunyikan di Desktop */
-}
-
-.desktop-only {
-    display: block; /* Default: Tampilkan di Desktop */
-}
-
 
 
 /* 6. Responsive Design (Media Queries Diperbarui) */
@@ -1139,15 +1139,6 @@ footer a {
 }
 footer a:hover {
     color: #fff;
-}
-
-/* KUNCI VISIBILITAS */
-.mobile-only {
-    display: none; /* Default: Sembunyikan versi mobile di desktop */
-}
-
-.desktop-only {
-    display: block; /* Default: Tampilkan versi desktop */
 }
 
 /* === MEDIA QUERY UNTUK TOGGLE VISIBILITAS === */
