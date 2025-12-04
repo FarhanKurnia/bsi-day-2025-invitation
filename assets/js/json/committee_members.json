@@ -14,6 +14,16 @@
         "role": "Sie Acara",
         "img": "nuti.webp"
     },
+        {
+        "name": "Anjeli Puteri",
+        "role": "Pembawa Acara",
+        "img": "jeli.webp"
+    },
+    {
+        "name": "Adhi Wiratomo",
+        "role": "Pembawa Acara",
+        "img": "tomo.webp"
+    },
     {
         "name": "Nabila Istiqomah",
         "role": "Sie Dokumentasi",
@@ -63,15 +73,5 @@
         "name": "Eva Indriyani",
         "role": "Sie Konsumsi",
         "img": "eva.webp"
-    },
-    {
-        "name": "Anjeli Puteri",
-        "role": "Pembawa Acara",
-        "img": "jeli.webp"
-    },
-    {
-        "name": "Adhi Wiratomo",
-        "role": "Pembawa Acara",
-        "img": "tomo.webp"
     }
 ]
