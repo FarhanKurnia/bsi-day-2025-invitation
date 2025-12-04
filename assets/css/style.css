@@ -740,6 +740,65 @@ iframe {
     color: #ccc;
 }
 
+/* === SEATING LEGEND STYLING (DIULANG UNTUK REFERENSI) === */
+.seating-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 25px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background: rgba(30, 30, 50, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.4);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* === GAYA UNTUK GAMBAR DENAH TEMPAT DUDUK === */
+.seating-image-container {
+    /* Posisikan container di tengah halaman */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Atur lebar maksimum agar tidak terlalu besar di desktop */
+    max-width: 1200px; 
+    margin: 30px auto 0 auto;
+    
+    /* Beri sedikit padding agar tidak menempel ke tepi di mobile */
+    padding: 0 10px; 
+}
+
+.responsive-seating-map {
+    /* Gambar akan responsif mengisi lebar container */
+    width: 100%; 
+    height: auto; 
+    display: block;
+    
+    /* Efek Menarik: Shadow */
+    /* filter: drop-shadow(0 0 10px rgba(0, 200, 255, 0.5)); */
+    transition: transform 0.3s ease;
+}
+
+.responsive-seating-map:hover {
+    /* Efek sedikit zoom in saat di hover */
+    transform: scale(1.01);
+}
 
 /* --- LOCK OVERLAY (Efek Terkunci) --- */
 .lock-overlay {
@@ -895,6 +954,17 @@ iframe {
     .interactive-link {
         width: 100%;
         max-width: 350px;
+    }
+
+    .seating-image-container {
+        padding: 0; /* Hapus padding agar gambar bisa lebih besar di mobile */
+        /* Optional: Mungkinkan scroll horizontal jika gambar terlalu lebar di layar kecil */
+        overflow-x: auto; 
+        /* justify-content: flex-start; */
+    }
+    .responsive-seating-map {
+        /* Tambahkan min-width agar gambar tidak menyusut terlalu kecil saat di scroll */
+        min-width: 800px; 
     }
 }
 

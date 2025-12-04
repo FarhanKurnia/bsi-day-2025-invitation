@@ -1,0 +1,62 @@
+{
+  "legend": [
+    {"key": "Manajemen", "color": "#D32F2F", "count": 4},
+    {"key": "IT Support", "color": "#1976D2", "count": 7},
+    {"key": "EA + HC + AMP", "color": "#009688", "count": 13},
+    {"key": "GRC + SOC + PKL", "color": "#7B1FA2", "count": 8},
+    {"key": "NDC 1 + NDC 2 + PKL", "color": "#00C853", "count": 13},
+    {"key": "Core + Intero", "color": "#FFC107", "count": 12},
+    {"key": "Akad", "color": "#2196F3", "count": 7},
+    {"key": "Akurasi", "color": "#4CAF50", "count": 5},
+    {"key": "ARMY", "color": "#9C27B0", "count": 7},
+    {"key": "ATOMIC", "color": "#FF9800", "count": 10},
+    {"key": "Avenger", "color": "#A1887F", "count": 7},
+    {"key": "ALPHA", "color": "#E64A19", "count": 8},
+    {"key": "KADIV TI", "color": "#795548", "count": 23},
+    {"key": "JS BARU", "color": "#FFEB3B", "count": 20}
+  ],
+  "seating": [
+    {
+      "name": "KIRI",
+      "rows": [
+        {"row_num": 9, "seats": []},
+        {"row_num": 8, "seats": [{"team": "NDC 1 + NDC 2 + PKL", "start": 8, "end": 7}, {"team": "EA + HC + AMP", "start": 6, "end": 1}]},
+        {"row_num": 7, "seats": [{"team": "NDC 1 + NDC 2 + PKL", "start": 9, "end": 8}, {"team": "EA + HC + AMP", "start": 7, "end": 1}]},
+        {"row_num": 6, "seats": [{"team": "NDC 1 + NDC 2 + PKL", "start": 9, "end": 8}, {"team": "EA + HC + AMP", "start": 7, "end": 1}]},
+        {"row_num": 5, "seats": [{"team": "NDC 1 + NDC 2 + PKL", "start": 9, "end": 8}, {"team": "EA + HC + AMP", "start": 7, "end": 1}]},
+        {"row_num": 4, "seats": [{"team": "NDC 1 + NDC 2 + PKL", "start": 9, "end": 8}, {"team": "EA + HC + AMP", "start": 7, "end": 1}]},
+        {"row_num": 3, "seats": [{"team": "IT Support", "start": 9, "end": 8}, {"team": "EA + HC + AMP", "start": 7, "end": 1}]},
+        {"row_num": 2, "seats": [{"team": "IT Support", "start": 8, "end": 7}, {"team": "EA + HC + AMP", "start": 6, "end": 1}]},
+        {"row_num": 1, "seats": [{"team": "IT Support", "start": 8, "end": 7}, {"team": "EA + HC + AMP", "start": 6, "end": 1}]}
+      ]
+    },
+    {
+      "name": "TENGAH",
+      "rows": [
+        {"row_num": 9, "seats": [{"team": "JS BARU", "start": 8, "end": 1}]},
+        {"row_num": 8, "seats": [{"team": "JS BARU", "start": 12, "end": 7}, {"team": "KADIV TI", "start": 6, "end": 1}]},
+        {"row_num": 7, "seats": [{"team": "KADIV TI", "start": 16, "end": 13}, {"team": "JS BARU", "start": 12, "end": 7}, {"team": "ALPHA", "start": 6, "end": 1}]},
+        {"row_num": 6, "seats": [{"team": "KADIV TI", "start": 16, "end": 13}, {"team": "JS BARU", "start": 12, "end": 7}, {"team": "ALPHA", "start": 6, "end": 1}]},
+        {"row_num": 5, "seats": [{"team": "Akad", "start": 14, "end": 13}, {"team": "ARMY", "start": 12, "end": 11}, {"team": "ATOMIC", "start": 10, "end": 8}, {"team": "Avenger", "start": 7, "end": 1}]},
+        {"row_num": 4, "seats": [{"team": "Akad", "start": 12, "end": 11}, {"team": "ATOMIC", "start": 10, "end": 7}, {"team": "Avenger", "start": 6, "end": 1}]},
+        {"row_num": 3, "seats": [{"team": "Akad", "start": 12, "end": 11}, {"team": "GRC + SOC + PKL", "start": 10, "end": 8}, {"team": "Core + Intero", "start": 7, "end": 1}]},
+        {"row_num": 2, "seats": [{"team": "Core + Intero", "start": 10, "end": 9}, {"team": "GRC + SOC + PKL", "start": 8, "end": 7}, {"team": "Core + Intero", "start": 6, "end": 1}]},
+        {"row_num": 1, "seats": [{"team": "Manajemen", "start": 8, "end": 7}, {"team": "Core + Intero", "start": 6, "end": 1}]}
+      ]
+    },
+    {
+      "name": "KANAN",
+      "rows": [
+        {"row_num": 9, "seats": []},
+        {"row_num": 8, "seats": [{"team": "Akurasi", "start": 1, "end": 5}]},
+        {"row_num": 7, "seats": [{"team": "Akurasi", "start": 1, "end": 6}, {"team": "ATOMIC", "start": 7, "end": 9}]},
+        {"row_num": 6, "seats": [{"team": "Akurasi", "start": 1, "end": 6}, {"team": "ATOMIC", "start": 7, "end": 9}]},
+        {"row_num": 5, "seats": [{"team": "Akurasi", "start": 1, "end": 9}]},
+        {"row_num": 4, "seats": [{"team": "Manajemen", "start": 1, "end": 9}]},
+        {"row_num": 3, "seats": [{"team": "Manajemen", "start": 1, "end": 9}]},
+        {"row_num": 2, "seats": [{"team": "ARMY", "start": 1, "end": 3}, {"team": "GRC + SOC + PKL", "start": 4, "end": 8}]},
+        {"row_num": 1, "seats": [{"team": "ARMY", "start": 1, "end": 2}, {"team": "GRC + SOC + PKL", "start": 3, "end": 8}]}
+      ]
+    }
+  ]
+}
