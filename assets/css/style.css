@@ -167,7 +167,7 @@ header h2 {
     transform: translateY(0);
 }
 .section-content {
-    /* max-width: 900px; */
+    max-width: 900px;
     width: 100%; /* Pastikan konten section mengisi lebar */
 }
 h2 {
