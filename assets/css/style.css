@@ -626,6 +626,73 @@ iframe {
     border-color: #fff; /* Titik putih */
 }
 
+/* style.css (Tambahkan di bagian akhir, setelah INTERACTIVE LINKS STYLING) */
+
+/* === CHALLENGE FOCUS STYLING (#challenge-focus) === */
+
+.focus-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.focus-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    width: 300px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    
+    background: rgba(40, 40, 65, 0.9);
+    border: 1px solid rgba(0, 200, 255, 0.3);
+    
+    /* Efek hover untuk membangun antisipasi */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.focus-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 200, 255, 0.4);
+    background: rgba(50, 50, 75, 1);
+}
+
+.focus-card i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffaa00; /* Warna fokus */
+}
+
+.focus-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.focus-card p {
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* Responsif */
+@media (max-width: 900px) {
+    .focus-card {
+        width: calc(50% - 30px); /* Dua kartu per baris */
+    }
+}
+@media (max-width: 600px) {
+    .focus-card {
+        width: 100%;
+    }
+}
+
 /* === GAMES GRID STYLING === */
 .games-grid {
     display: grid;
