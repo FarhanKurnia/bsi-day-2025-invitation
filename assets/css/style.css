@@ -1,6 +1,5 @@
-/* style.css */
 
-/* 1. Global & Font */
+/* Global & Font */
 * {
     margin: 0;
     padding: 0;
@@ -17,14 +16,14 @@
     display: block; /* Default: Tampilkan di Desktop */
 }
 
-/* ATURAN EMAS RESPONSIVE UNTUK SEMUA GAMBAR (IMG) */
+/* === SECTION: BASE === */
 img {
-    max-width: 100%; /* Gambar tidak akan melebihi lebar kontainernya */
-    height: auto;    /* Menjaga rasio aspek gambar */
+    max-width: 100%; 
+    height: auto;    
     display: block;
 }
 
-/* 2. Body & Smooth Background */
+
 body {
     background-color: #03030f;
     background-image: url('../img/background-main.webp'); 
@@ -49,7 +48,7 @@ body::before {
     z-index: -1;
 }
 
-/* === 3. COVER SECTION === */
+/* === SECTION: COVER === */
 #cover {
     position: fixed;
     top: 0;
@@ -75,9 +74,8 @@ body::before {
     visibility: hidden;
 }
 #cover img {
-    /* Aturan max-width: 100% dari img{} sudah diterapkan */
     width: 500px; 
-    max-width: 90%; /* Kontrol ukuran maksimal */
+    max-width: 90%; 
     margin-bottom: 50px; 
 }
 #guest-name {
@@ -102,7 +100,7 @@ body::before {
     text-transform: uppercase;
 }
 
-/* 4. Header (Full Screen) */
+/* === SECTION: HEADER === */
 header {
     height: 100vh;
     background: url('../img/background-main.webp') center/cover no-repeat; 
@@ -141,7 +139,6 @@ header h2 {
     margin-bottom: 20px;
 }
 
-/* 5. Perindahan Countdown */
 #countdown {
     position: relative;
     z-index: 1;
@@ -157,7 +154,6 @@ header h2 {
     white-space: nowrap; /* Mencegah countdown pecah */
 }
 
-/* Sisa Section */
 .section {
     min-height: 100vh;
     padding: 80px 10%;
@@ -185,7 +181,6 @@ h2 {
     color: #00c8ff;
     text-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
 }
-/* ... (p, ul, li tetap) ... */
 iframe {
     border: 3px solid #00c8ff;
     border-radius: 15px;
@@ -196,7 +191,7 @@ iframe {
     height: 400px;
 }
 
-/* === SUSUNAN PANITIA GRID === */
+/* === SECTION: COMMITTEES === */
 .committee-grid {
     display: grid;
     /* Membuat kolom otomatis, minimum 200px lebar per kartu */
@@ -262,7 +257,7 @@ iframe {
     margin: 0; /* Hilangkan margin p global */
 }
 
-/* === DO'S AND DON'TS STYLING === */
+/* === SECTION: RULES === */
 .section-subtitle {
     font-size: 1.1rem;
     color: #ccc;
@@ -351,7 +346,7 @@ iframe {
     flex-shrink: 0; /* Pastikan ikon tidak menyusut */
 }
 
-/* === KETENTUAN HADIAH STYLING (#prizes) === */
+/* === SECTION: PRIZE === */
 .section-content h2.prizes-title { /* Jika Anda memberi class pada h2 di HTML, jika tidak, gunakan h2 di konteks #prizes */
     margin-bottom: 20px;
 }
@@ -475,8 +470,7 @@ iframe {
     letter-spacing: 1px;
 }
 
-/* === NOMINASI PENGHARGAAN STYLING (#awards) === */
-
+/* === SECTION: AWARDING === */
 .awards-grid {
     display: grid;
     /* Atur agar ada 3 kolom di desktop, minimum 250px per kolom */
@@ -535,7 +529,93 @@ iframe {
     text-shadow: 0 0 5px rgba(0, 200, 255, 0.3);
 }
 
-/* === RUNDOWN ACARA (TIMELINE) STYLING === */
+/* === SECTION: OOTD === */
+.dresscode-carousel-container {
+    position: relative;
+    max-width: 600px; 
+    margin: 50px auto 30px auto;
+    overflow: hidden; 
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    background: #ffffff;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(219, 219, 219, 1) 47%, rgba(171, 171, 171, 1) 100%);
+
+}
+
+.dresscode-carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    width: 100%; 
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.carousel-img {
+    width: 100%;
+    height: auto;
+    max-height: 50vh; 
+    object-fit: contain; 
+    display: block;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.slide-caption {
+    color: rgba(40, 40, 65, 0.8);
+    font-size: 0.95rem;
+    padding: 15px 10px;
+    margin: 0;
+    text-align: center;
+}
+
+/* --- KONTROL DAN DOTS CAROUSEL --- */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.8;
+    transition: background 0.3s;
+}
+
+.carousel-control:hover { background: rgba(0, 200, 255, 0.7); opacity: 1; }
+.carousel-control.prev { left: 0; border-radius: 0 5px 5px 0; }
+.carousel-control.next { right: 0; border-radius: 5px 0 0 5px; }
+
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active-dot { background-color: #00c8ff; }
+
+
+/* === SECTION: RUNDOWN === */
 .timeline {
     position: relative;
     max-width: 900px;
@@ -635,10 +715,7 @@ iframe {
     border-color: #fff; /* Titik putih */
 }
 
-/* style.css (Tambahkan di bagian akhir, setelah INTERACTIVE LINKS STYLING) */
-
-/* === CHALLENGE FOCUS STYLING (#challenge-focus) === */
-
+/* === SECTION: GAMES === */
 .focus-grid {
     display: flex;
     justify-content: center;
@@ -690,36 +767,6 @@ iframe {
     line-height: 1.5;
 }
 
-/* Responsif */
-@media (max-width: 900px) {
-    .focus-card {
-        width: calc(50% - 30px); /* Dua kartu per baris */
-    }
-}
-@media (max-width: 600px) {
-    .focus-card {
-        width: 100%;
-    }
-}
-
-/* === GAYA KHUSUS UNTUK VERSI MOBILE (Gambar Fokus Tunggal) === */
-
-.mobile-focus-image-container {
-    width: 100%;
-    max-width: 450px; /* Batasan lebar agar gambar tidak terlalu besar di mobile */
-    margin: 30px auto;
-    text-align: center;
-}
-
-.mobile-challenge-graphic {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    filter: drop-shadow(0 0 10px rgba(0, 150, 255, 0.4));
-}
-
-/* === GAMES GRID STYLING === */
 .games-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -760,10 +807,70 @@ iframe {
     filter: brightness(1);
 }
 
-/* style.css (Tambahkan di bagian akhir, sebelum Media Queries) */
+.lock-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)); 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    border: 3px solid #ffaa00;
+    box-shadow: 0 0 15px rgba(255, 170, 0, 0.5);
+}
 
-/* === INTERACTIVE LINKS STYLING (#interactive-links) === */
-/* --- Gaya Baru untuk Tag Gambar Logo (.link-icon-img) --- */
+.lock-icon {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: #ffaa00; 
+    /* Animasi denyut (pulse) ringan */
+    animation: pulse 1.5s infinite; 
+}
+
+.lock-overlay h4 {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    color: #ffaa00;
+}
+
+.lock-overlay p {
+    font-size: 0.95rem; 
+    color: #ddd;
+    margin: 10px 0; 
+    max-width: 250px; 
+    line-height: 1.4;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.9; }
+}
+
+.mobile-focus-image-container {
+    width: 100%;
+    max-width: 450px; /* Batasan lebar agar gambar tidak terlalu besar di mobile */
+    margin: 30px auto;
+    text-align: center;
+}
+
+.mobile-challenge-graphic {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px rgba(0, 150, 255, 0.4));
+}
+
+
+/* === SECTION: INTERACTIVE LINKS === */
 .link-icon-img {
     /* Set ukuran tetap yang sama dengan ikon Font Awesome sebelumnya */
     width: 70px;
@@ -833,7 +940,7 @@ iframe {
     color: #ccc;
 }
 
-/* === GAYA UNTUK GAMBAR DENAH TEMPAT DUDUK === */
+/* === SECTION: SEATING === */
 .seating-image-container {
     /* Tambahkan origin untuk transisi penskalaan */
     transform-origin: top center; 
@@ -863,68 +970,61 @@ iframe {
     transform: scale(1.01);
 }
 
-/* --- LOCK OVERLAY (Efek Terkunci) --- */
-.lock-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Gradient gelap semi-transparan dari bawah ke atas */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)); 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Posisikan konten di bawah */
-    align-items: center;
-    padding: 20px;
-    color: #fff;
+/* === SECTION: FOOTER === */
+footer {
+    background-color: #0d0d1a;
+    padding: 20px 10%;
     text-align: center;
-    transition: opacity 0.3s ease;
-    border: 3px solid #ffaa00; /* Border Emas Tanda Terkunci */
-    box-shadow: 0 0 15px rgba(255, 170, 0, 0.5);
+    border-top: 1px solid rgba(0, 200, 255, 0.2);
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 50px; 
+}
+footer p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.9rem; 
+}
+footer a {
+    color: #00c8ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+footer a:hover {
+    color: #fff;
 }
 
-.lock-icon {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-    color: #ffaa00; /* Warna Emas */
-    /* Animasi denyut (pulse) ringan */
-    animation: pulse 1.5s infinite; 
-}
-
-.lock-overlay h4 {
-    font-size: 1.5rem;
-    margin: 5px 0;
-    color: #ffaa00;
-}
-
-.lock-overlay p {
-    font-size: 0.95rem; /* Ukuran font bisa disesuaikan */
-    color: #ddd;
-    margin: 10px 0; /* Tambahkan margin vertikal agar tidak terlalu rapat */
-    max-width: 250px; /* Batasi lebar teks agar tidak terlalu panjang */
-    line-height: 1.4;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); opacity: 0.9; }
-    50% { transform: scale(1.1); opacity: 1; }
-    100% { transform: scale(1); opacity: 0.9; }
-}
-
-/* === SECTION: GAMES === */
-/* Gunakan pseudo-element :after dan :before untuk Tooltip */
-/* Modifikasi gaya p di lock-overlay agar teks terlihat lebih baik */
-
-
-
-/* 6. Responsive Design (Media Queries Diperbarui) */
+/* Responsive (Media Queries) */
 @media (max-width: 1024px) {
     header h2 { font-size: 2rem; }
     #countdown { font-size: 2.2rem; }
     h2 { font-size: 2.5rem; }
     p, ul { font-size: 1.1rem; }
     #guest-name { font-size: 1.5rem; }
+}
+
+@media (max-width: 900px) {
+    /* Pada Mobile, Balikkan Tampilan */
+    .mobile-only {
+        display: block !important; /* Tampilkan Versi Mobile */
+    }
+    .desktop-only {
+        display: none !important; /* Sembunyikan Versi Desktop */
+    }
+
+    /* Pada Mobile, berikan lebar penuh pada item tunggal */
+    .ootd-card {
+        width: calc(50% - 20px); 
+    }
+    
+    .ootd-example-item.single-item-focus {
+        width: 100%;
+        max-width: none; 
+    }
+
+    .focus-card {
+        width: calc(50% - 30px); /* Dua kartu per baris */
+    }
 }
 
 @media (max-width: 768px) {
@@ -1040,6 +1140,49 @@ iframe {
         /* Di sini tidak perlu min-width lagi */
         min-width: unset; 
     }
+    
+    .dresscode-carousel-container {
+        max-width: 95%; 
+        margin-top: 30px;
+        /* Batasan tinggi total container di mobile (agresif) */
+        max-height: 70vh; 
+        overflow: hidden; 
+        padding-bottom: 5px; 
+    }
+    
+    .carousel-slide {
+        /* Ditegaskan lagi di mobile */
+        min-width: 100%;
+        width: 100%; 
+    }
+
+    .carousel-img {
+        /* Batasan tinggi yang dioptimalkan untuk gambar 1:1 */
+        max-height: 40vh; 
+    }
+    
+    .slide-caption {
+        font-size: 0.8rem;
+        padding: 10px 5px;
+    }
+    
+    .carousel-control {
+        top: 45%;
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .ootd-card {
+        width: 100%;
+    }
+
+    .focus-card {
+        width: 100%;
+    }
+
+    
 }
 
 @media (max-width: 480px) {
@@ -1115,39 +1258,8 @@ iframe {
         width: 180%; /* Lebar lebih besar (100% / 0.55 ≈ 1.8) */
         margin-left: -40%; /* Geser lebih jauh ke kiri */
     }
-}
 
-/* === FOOTER === */
-footer {
-    background-color: #0d0d1a;
-    padding: 20px 10%;
-    text-align: center;
-    border-top: 1px solid rgba(0, 200, 255, 0.2);
-    font-size: 0.9rem;
-    color: #888;
-    margin-top: 50px; 
-}
-footer p {
-    margin: 0;
-    line-height: 1.5;
-    font-size: 0.9rem; 
-}
-footer a {
-    color: #00c8ff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-footer a:hover {
-    color: #fff;
-}
-
-/* === MEDIA QUERY UNTUK TOGGLE VISIBILITAS === */
-@media (max-width: 900px) {
-    /* Pada Mobile, Balikkan Tampilan */
-    .mobile-only {
-        display: block !important; /* Tampilkan Versi Mobile */
-    }
-    .desktop-only {
-        display: none !important; /* Sembunyikan Versi Desktop */
+    .carousel-img {
+        max-height: 35vh; 
     }
 }

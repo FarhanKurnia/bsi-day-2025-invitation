@@ -154,6 +154,62 @@ const revealOnScroll = () => {
 };
 window.addEventListener('scroll', revealOnScroll);
 
+// script.js (Pastikan fungsi ini dipanggil di dalam event listener DOMContentLoaded)
+
+const setupDressCodeCarousel = () => {
+    // Dapatkan elemen dengan ID spesifik
+    const slidesContainer = document.getElementById('dresscodeCarouselSlides');
+    const dotsContainer = document.getElementById('dresscodeCarouselDots');
+    // Targeting kontrol dengan ID parent untuk menghindari konflik dengan carousel lain
+    const prevButton = document.querySelector('#dresscode .carousel-control.prev'); 
+    const nextButton = document.querySelector('#dresscode .carousel-control.next'); 
+    
+    if (!slidesContainer) return; // Keluar jika elemen tidak ditemukan
+
+    const slides = slidesContainer.querySelectorAll('.carousel-slide');
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+
+    const updateCarousel = () => {
+        // Menghitung offset horizontal
+        const offset = -currentSlide * 100;
+        slidesContainer.style.transform = `translateX(${offset}%)`;
+        updateDots();
+    };
+
+    const updateDots = () => {
+        dotsContainer.innerHTML = '';
+        slides.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (index === currentSlide) {
+                dot.classList.add('active-dot');
+            }
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateCarousel();
+            });
+            dotsContainer.appendChild(dot);
+        });
+    };
+    
+    prevButton.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+    });
+
+    if (totalSlides > 0) {
+        updateDots(); 
+        updateCarousel(); 
+    }
+};
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // --- FUNGSI DINAMIS PANITIA ---
     const loadCommitteeMembers = async () => {
@@ -232,4 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadCommitteeMembers();
     // Panggil fungsi untuk memuat rundown (di bawah pemanggilan loadCommitteeMembers)
     loadRundown();
+
+    setupDressCodeCarousel(); // Panggil fungsi setup carousel Dress Code
+
 });
